@@ -19,6 +19,7 @@
 
 #include <aws/core/utils/memory/stl/AWSAllocator.h>
 
+#include <functional>
 #include <string>
 
 namespace Aws
@@ -101,6 +102,21 @@ using WString = std::basic_string< wchar_t, std::char_traits< wchar_t >, Aws::Al
 #endif // __ANDROID
 
 } // namespace Aws
+
+namespace std
+{
+
+template <>
+struct hash<Aws::String>
+{
+    std::size_t operator()(const Aws::String& key) const
+    {
+        return std::hash<const char *>()(key.c_str());
+    }
+};
+
+} // namespace std
+
 /*
 #endif // __ANDROID__
 */
