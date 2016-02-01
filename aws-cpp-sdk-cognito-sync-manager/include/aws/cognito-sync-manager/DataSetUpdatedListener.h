@@ -14,6 +14,7 @@
 */
 #pragma once
 
+#include <aws/cognito-sync-manager/CognitoSyncManager_EXPORTS.h>
 #include <aws/core/utils/memory/stl/AWSString.h>
 #include <functional>
 
@@ -26,7 +27,7 @@ namespace Aws
 
     namespace CognitoSyncManager
     {
-        class SyncUpdate
+        class AWS_COGNITO_SYNC_MGR_API SyncUpdate
         {
 
         public:
@@ -88,7 +89,7 @@ namespace Aws
             int64_t m_syncCount;
         };
 
-        class DataSetUpdatedListener
+        class AWS_COGNITO_SYNC_MGR_API DataSetUpdatedListener
         {
         public:
             DataSetUpdatedListener(const std::shared_ptr<Aws::CognitoSync::CognitoSyncClient>& client,
@@ -111,7 +112,7 @@ namespace Aws
             Aws::String m_dataSetName;
         };
 
-        class DataSetUpdatedListenerFactory
+        class AWS_COGNITO_SYNC_MGR_API DataSetUpdatedListenerFactory
         {
         public:
             virtual std::shared_ptr<DataSetUpdatedListener> CreateInstance() const = 0;

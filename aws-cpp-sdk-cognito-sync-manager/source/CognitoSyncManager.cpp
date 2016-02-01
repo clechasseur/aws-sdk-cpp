@@ -63,7 +63,6 @@ CognitoSyncManager::CognitoSyncManager(const char* dataSetName, const std::share
 
 CognitoSyncManager::CognitoSyncManager(const char* dataSetName, const std::shared_ptr<Aws::CognitoSync::CognitoSyncClient>& syncClient,
                    const std::shared_ptr<Aws::Auth::CognitoCachingCredentialsProvider>& credsProvider,
-                   const Aws::Client::ClientConfiguration& clientConfiguration,
                    const std::shared_ptr<DataSetRecordsRepository>& repository,
                    const std::shared_ptr<DataSetUpdatedListener>& listener)
 {

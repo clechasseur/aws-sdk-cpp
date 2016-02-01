@@ -52,7 +52,7 @@ endif()
 include_directories(${COGNITO_SYNC_INCLUDES})
 
 if(MSVC AND BUILD_SHARED_LIBS)
-    add_definitions("-DAWS_TRANSFER_EXPORTS")
+    add_definitions("-DAWS_COGNITO_SYNC_MGR_EXPORTS")
 endif()
 
 add_library(aws-cpp-sdk-cognito-sync-manager ${LIBTYPE} ${ALL_COGNITO_SYNC} include/aws/cognito-sync-manager/DefaultDataSetUpdatedListener.h)

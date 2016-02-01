@@ -14,6 +14,7 @@
 */
 #pragma once
 
+#include <functional>
 #include <memory>
 #include <aws/core/client/ClientConfiguration.h>
 #include <aws/cognito-sync/model/Record.h>
@@ -53,7 +54,6 @@ namespace Aws
 
             CognitoSyncManager(const char* dataSetName, const std::shared_ptr<Aws::CognitoSync::CognitoSyncClient>& syncClient,
                                const std::shared_ptr<Aws::Auth::CognitoCachingCredentialsProvider>& credsProvider,
-                               const Aws::Client::ClientConfiguration& clientConfiguration = Aws::Client::ClientConfiguration(),
                                const std::shared_ptr<DataSetRecordsRepository>& repository = nullptr,
                                const std::shared_ptr<DataSetUpdatedListener>& listener = nullptr);
 
