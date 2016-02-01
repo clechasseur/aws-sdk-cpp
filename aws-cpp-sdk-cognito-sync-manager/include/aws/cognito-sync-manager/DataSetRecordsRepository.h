@@ -14,6 +14,7 @@
 */
 #pragma once
 
+#include <aws/cognito-sync-manager/CognitoSyncManager_EXPORTS.h>
 #include <aws/cognito-sync/model/Record.h>
 #include <aws/core/utils/memory/stl/AWSVector.h>
 
@@ -21,7 +22,7 @@ namespace Aws
 {
     namespace CognitoSyncManager
     {
-        class DataSetRecordsRepository
+        class AWS_COGNITO_SYNC_MGR_API DataSetRecordsRepository
         {
         public:
             DataSetRecordsRepository(const char* dataSetName, const char* identityPoolId, const char* identityId) :

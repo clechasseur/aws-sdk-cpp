@@ -30,7 +30,7 @@ namespace Aws
     }
     namespace CognitoSyncManager
     {
-        class DefaultDataSetRecordsRepository : public DataSetRecordsRepository
+        class AWS_COGNITO_SYNC_MGR_API DefaultDataSetRecordsRepository : public DataSetRecordsRepository
         {
         public:
             DefaultDataSetRecordsRepository(const char* dataSetName, const char* identityPoolId, const char* identityId);
