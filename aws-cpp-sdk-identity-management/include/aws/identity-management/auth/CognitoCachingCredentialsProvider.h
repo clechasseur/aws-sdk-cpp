@@ -20,6 +20,7 @@
 #include <aws/identity-management/IdentityManagment_EXPORTS.h>
 
 #include <mutex>
+#include "PersistentCognitoIdentityProvider.h"
 
 namespace Aws
 {
@@ -35,6 +36,7 @@ namespace Aws
         {
         public:
             AWSCredentials GetAWSCredentials() override;
+            inline const std::shared_ptr<PersistentCognitoIdentityProvider> GetIdentityProvider() const { return m_identityRepository; }
 
         protected:
             /**

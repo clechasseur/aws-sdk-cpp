@@ -21,6 +21,7 @@
 
 #include <map>
 #include <cstring>
+#include <unordered_map>
 
 namespace Aws
 {
@@ -36,5 +37,7 @@ struct CompareStrings
 };
 
 template<typename V> using CStringMap = std::map<const char*, V, CompareStrings, Aws::Allocator<std::pair<const char*, V> > >;
+
+template< typename K, typename V > using UnorderedMap = std::unordered_map< K, V, std::hash<K>, std::equal_to< K >, Aws::Allocator< std::pair< const K, V > > >;
 
 } // namespace Aws
